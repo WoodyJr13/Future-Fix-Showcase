@@ -103,7 +103,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">Meet The Team</h2>
             </div>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-12">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2 mt-12">
               {teamMembers.map((member, index) => (
                 <Card key={index}>
                   <CardHeader>
