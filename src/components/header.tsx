@@ -13,6 +13,7 @@ export function Header() {
     { name: 'Mission', href: '#mission' },
     { name: 'Team', href: '#team' },
     { name: 'Gallery', href: '#gallery' },
+    { name: 'Events', href: '#events' },
     { name: 'Contact', href: '#contact' },
   ];
 

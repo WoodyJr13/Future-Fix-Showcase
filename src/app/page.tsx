@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
+import { Calendar } from '@/components/ui/calendar';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Input } from '@/components/ui/input';
+import Link from 'next/link';
 
 export default function Home() {
   const teamMembers = [
@@ -139,7 +140,26 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="w-full py-16 md:py-24 bg-background">
+        <section id="events" className="w-full py-16 md:py-24 bg-background">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">Events Schedule</h2>
+              <p className="text-muted-foreground md:text-lg">
+                Stay tuned for our upcoming events! Dates to be decided.
+              </p>
+            </div>
+            <div className="mt-12 flex justify-center">
+              <Card className="p-4">
+                <Calendar
+                  mode="single"
+                  className="rounded-md border"
+                />
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="w-full py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
               <div className="space-y-4">
@@ -162,8 +182,10 @@ export default function Home() {
                     <CardTitle>Board Applications</CardTitle>
                   </CardHeader>
                   <CardContent>
-                     <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-                        Apply Now
+                     <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
+                        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeejQrJQ0aPxHqIbb6CYdwB-QAmlQPKDPiBvWhwbx4ZyyG9AQ/viewform" target="_blank" rel="noopener noreferrer">
+                          Apply Now
+                        </Link>
                     </Button>
                   </CardContent>
                 </Card>
