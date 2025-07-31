@@ -10,10 +10,10 @@ export function Header() {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Impact', href: '#impact' },
-    { name: 'Events', href: '#events' },
-    { name: 'Volunteer', href: '#volunteer' },
+    { name: 'Mission', href: '#mission' },
+    { name: 'Team', href: '#team' },
+    { name: 'Gallery', href: '#gallery' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   const handleLinkClick = () => {
@@ -25,7 +25,7 @@ export function Header() {
       <div className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
         <Link href="#home" className="flex items-center gap-2">
           <Mountain className="h-6 w-6 text-primary" />
-          <span className="text-lg font-bold font-headline">FutureFix Hub</span>
+          <span className="text-lg font-bold font-headline">FutureFix</span>
         </Link>
         <nav className="hidden md:flex gap-6 items-center">
           {navLinks.map((link) => (
@@ -51,7 +51,7 @@ export function Header() {
               <nav className="grid gap-6 text-lg font-medium mt-10">
                 <Link href="#home" className="flex items-center gap-2 text-lg font-semibold" onClick={handleLinkClick}>
                     <Mountain className="h-6 w-6 text-primary" />
-                    <span>FutureFix Hub</span>
+                    <span>FutureFix</span>
                 </Link>
                 {navLinks.map((link) => (
                   <Link key={link.name} href={link.href} className="hover:text-primary" onClick={handleLinkClick}>
